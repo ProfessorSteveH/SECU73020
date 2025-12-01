@@ -5,7 +5,8 @@ services:
     restart: always
     ports:
       - 8080:80
+    environment:
+      EXT_IP: ${EXT_IP}
     volumes:
       - ./images:/var/www/html/images
       - ./data:/var/www/data
-
