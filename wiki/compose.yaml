@@ -1,0 +1,11 @@
+# Access via "http://localhost:8080"
+services:
+  mediawiki:
+    image: secu73020-wiki:latest
+    restart: always
+    ports:
+      - 8080:80
+    volumes:
+      - ./images:/var/www/html/images
+      - ./data:/var/www/data
+
